@@ -1,6 +1,6 @@
-// ===============================
+
 // HAMBURGER MENU
-// ===============================
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -10,46 +10,7 @@ hamburger.addEventListener("click", () => {
 
 
 // ======================================================
-// 🔴 STATIC WAY (OLD METHOD) — AB COMMENTED
-// ======================================================
-
-// const products = [
-//   {
-//     name: "T-shirts",
-//     price: 499,
-//     image: "https://images.pexels.com/photos/4440566/pexels-photo-4440566.jpeg"
-//   },
-//   {
-//     name: "Shoes",
-//     price: 799,
-//     image: "https://images.pexels.com/photos/26893166/pexels-photo-26893166.jpeg"
-//   },
-//   {
-//     name: "Watch",
-//     price: 499,
-//     image: "https://images.pexels.com/photos/18509275/pexels-photo-18509275.jpeg"
-//   }
-// ];
-
-// const productGrid = document.querySelector(".product-grid");
-
-// products.forEach(product => {
-//   const div = document.createElement("div");
-//   div.className = "product-card";
-
-//   div.innerHTML = `
-//     <img src="${product.image}" alt="${product.name}">
-//     <h3>${product.name}</h3>
-//     <p>₹${product.price}</p>
-//     <button>Add to Cart</button>
-//   `;
-
-//   productGrid.appendChild(div);
-// });
-
-
-// ======================================================
-// 🟢 DYNAMIC WAY (API METHOD) — ACTIVE CODE
+// 🟢 DYNAMIC PRODUCTS (API METHOD)
 // ======================================================
 
 const productGrid = document.querySelector(".product-grid");
@@ -57,13 +18,22 @@ const statusMsg = document.getElementById("statusMsg");
 
 // FakeStore API se products la rahe hain
 fetch("https://fakestoreapi.com/products")
-  .then(res => res.json())          // API response ko JS object me convert
+  .then(res => res.json())
   .then(products => {
-    statusMsg.style.display = "none"; // Loading message chhupa do
+
+    if (statusMsg) statusMsg.style.display = "none";
 
     // Sirf 8 products dikhane ke liye
-    products.slice( 0,8).forEach(product => {
+    products.slice(0, 8).forEach(product => {
 
+      // 🔹 1. LINK BANAYA (NEW)
+      const link = document.createElement("a");
+      link.href = `product.html?id=${product.id}`;
+      
+      link.style.textDecoration = "none";
+      link.style.color = "inherit";
+
+      // 🔹 2. PRODUCT CARD (OLD CODE)
       const div = document.createElement("div");
       div.className = "product-card";
 
@@ -71,15 +41,21 @@ fetch("https://fakestoreapi.com/products")
         <img src="${product.image}" alt="${product.title}" loading="lazy">
         <h3>${product.title}</h3>
         <p>₹${Math.round(product.price * 80)}</p>
-        <button>Add to Cart</button>
+        <button> Add to Cart</button>
       `;
 
+      // 🔹 3. BUTTON CLICK (STOP PAGE REDIRECT)
       const button = div.querySelector("button");
-      button.addEventListener("click", () => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault(); // 🔥 important
         alert(`${product.title} added to cart 🛒`);
       });
 
-      productGrid.appendChild(div);
+      // 🔹 4. CARD KO LINK KE ANDAR DALA
+      link.appendChild(div);
+
+      // 🔹 5. LINK KO GRID ME DALA
+      productGrid.appendChild(link);
     });
 
   })

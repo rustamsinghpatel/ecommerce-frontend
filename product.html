@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details</title>
+
+  <!-- Same CSS file jo main site me use ho rahi hai -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+ <header>
+  <div class="logo">
+    <h2>ShopLogo</h2>
+  </div>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-right">
+    <input type="text" placeholder="Search products..." class="search-bar">
+    <div class="cart">
+      🛒 <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger">
+      ☰
+    </div>
+  </div>
+</header>
+
+  <!-- ===== PRODUCT DETAIL SECTION ===== -->
+  <section class="product-detail">
+  <div class="product-detail-container">
+
+    <div class="product-image">
+      <img id="productImage" src=""alt="Product Image">
+    </div>
+    
+    <div class="product-info">
+      <h2 id="productTitle">Loading...</h2>
+      <p class="price" id="productPrice">₹000</p>
+      <p class="description" id="productDescription">
+        Product description will appear here.
+      </p>
+
+<!--1 Product variations (size, color) -->
+    
+<div class="product-variations">
+
+  <label for="size">Select Size:</label>
+  <select id="size">
+    <option value="">Choose Size</option>
+    <option value="S">Small</option>
+    <option value="M">Medium</option>
+    <option disabled>L</option>
+  </select>
+
+  <label for="color">Select Color:</label>
+  <select id="color">
+    <option value="">Choose Color</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Black">Black</option>
+  </select>
+
+</div>
+<!--2 Quantity selector + Add to Cart button -->
+
+  <div class="quantity-box">
+
+  <button id="minus">-</button>
+
+  <span id="quantity">1</span>
+
+  <button id="plus">+</button>
+
+</div>
+      <button id="addToCartBtn" class="add-btn">Add to Cart</button>
+        
+
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 MyShop. All Rights Reserved.</p>
+    <p class="footer-sub">
+      Made with ❤️ by Rustam
+    </p>
+  </div>
+</footer>
+    <script src="product.js"></script>
+
+</body>
+</html>

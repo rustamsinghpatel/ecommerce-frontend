@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart page</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <h2>ShopLogo</h2>
+  </div>
+
+  <nav class="nav-links">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-right">
+    <input type="text" placeholder="Search products..." class="search-bar">
+    <div class="cart">
+      🛒 <span class="cart-count">0</span>
+    </div>
+    <div class="hamburger">
+      ☰
+    </div>
+  </div>
+</header>
+
+  <!-- ===== CART PAGE ===== -->
+  <section class="cart-page">
+    <h1>Shopping Cart</h1>
+    <div id="cartItems"></div>
+  </section>
+
+
+  <div class="cart-summary">
+  <h2>Total: ₹<span id="cartTotal">0</span></h2>
+
+  <button id="checkoutBtn">Proceed to Checkout</button>
+
+  <a href="products.html" class="continue-btn">
+    Continue Shopping
+  </a>
+</div>
+
+  <script src="scripts/cart.js"></script>
+</body>
+</html>

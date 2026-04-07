@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cart page</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+
 <header>
   <div class="logo">
     <h2>ShopLogo</h2>
@@ -14,41 +15,49 @@
 
   <nav class="nav-links">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
   <div class="header-right">
-    <input type="text" placeholder="Search products..." class="search-bar">
     <div class="cart">
-      🛒 <span class="cart-count">0</span>
-    </div>
-    <div class="hamburger">
-      ☰
+      <a href="cart.html">
+        🛒 <span class="cart-count">0</span>
+      </a>  
     </div>
   </div>
 </header>
 
-  <!-- ===== CART PAGE ===== -->
   <section class="cart-page">
-    <h1>Shopping Cart</h1>
-    <div id="cartItems"></div>
+    <h1>Your Shopping Cart</h1>
+    
+    <div id="cartItems">
+        </div>
   </section>
 
-
   <div class="cart-summary">
-  <h2>Total: ₹<span id="cartTotal">0</span></h2>
+    
+   <h2 class="total-text">Total: ₹ <span id="cartTotal">0.00</span></h2>
+   <hr>
+    <button id="checkoutBtn">Proceed to Checkout</button>
 
-  <button id="checkoutBtn">Proceed to Checkout</button>
-
-  <a href="products.html" class="continue-btn">
-    Continue Shopping
-  </a>
-</div>
+    <br><br>
+    <a href="product.html" class="continue-btn">
+      ← Continue Shopping
+    </a>
+  </div>
 
   <script src="scripts/cart.js"></script>
+  <footer class="footer">
+  <div class="footer-content">
+    <p>© 2026 MyShop. All Rights Reserved.</p>
+    <p class="footer-sub">
+      Made with ❤️ by Rustam Patel
+    </p>
+  </div>
+</footer>
 </body>
 </html>

@@ -4,6 +4,7 @@ html, body {
 }
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -345,6 +346,171 @@ header .nav-links ul li a:hover {
   cursor:pointer;
 }
 
+/* =========================================
+   🛒 SHOPPING CART PAGE STYLES
+   ========================================= */
+
+/* 1️⃣ Page Container */
+.cart-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f4f6f9;
+}
+
+.cart-page h1 {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+/* =========================================
+   2️⃣ Individual Cart Item
+   ========================================= */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   3️⃣ Quantity Controls
+   ========================================= */
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.qty-controls button {
+    padding: 5px 12px;
+    cursor: pointer;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.qty-controls button:hover {
+    background: #e0e0e0;
+}
+
+/* =========================================
+   4️⃣ Cart Summary Section
+   ========================================= */
+
+.cart-summary {
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.total-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#cartTotal {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Line under total */
+.cart-summary hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* =========================================
+   5️⃣ Buttons
+   ========================================= */
+
+#checkoutBtn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#checkoutBtn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.continue-btn {
+    text-decoration: none;
+    margin-bottom: 50px;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.continue-btn:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   6️⃣ Responsive
+   ========================================= */
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cart-summary {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
 /* Footer Section */
 .footer {
   width: 100%;
@@ -363,4 +529,13 @@ header .nav-links ul li a:hover {
 .footer-sub {
   font-size: 13px;
   color: #bbb;
+}
+
+
+Responsive for Mobile
+@media (max-width: 768px) {
+    .cart-summary {
+        align-items: center; /* Mobile par center align ho jayega */
+        text-align: center;
+    }
 }

@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 16px 20px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -48,7 +48,7 @@ header .nav-links ul li a {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 }
 
 /* Search bar */
@@ -88,6 +88,35 @@ header .nav-links ul li a {
 header .nav-links ul li a:hover {
   color: #007BFF;   
 }   
+
+
+/* ===============================
+   Logout Button Styling
+=============================== */
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+/* Active Click Effect */
+.logout-btn:active {
+  transform: scale(0.95);
+}
+
 
 /* Responsive: mobile menu */
 @media (max-width: 768px) {

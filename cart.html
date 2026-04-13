@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/cart.css">
+    
 </head>
 <body>
 
-<header>
-  <div class="logo">
-    <h2>ShopLogo</h2>
-  </div>
+ <!-- ===== HEADER / NAVBAR ===== -->
+ <header>
+  
+ <div class="logo">
+  <img src="images/logo (1).webp" alt="Shop Logo">
+</div>
 
   <nav class="nav-links">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="product.html">Products</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="index.html#products">Products</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
   <div class="header-right">
-    <div class="cart">
-      <a href="cart.html">
-        🛒 <span class="cart-count">0</span>
-      </a>  
+    <input type="text" placeholder="Search products..." class="search-bar">
+   <a href="cart.html" class="cart">
+  🛒 <span class="cart-count">0</span>
+</a>
+    <div class="hamburger">
+      ☰
     </div>
   </div>
+  
+ 
 </header>
 
   <section class="cart-page">
@@ -46,7 +52,7 @@
     <button id="checkoutBtn">Proceed to Checkout</button>
 
     <br><br>
-    <a href="product.html" class="continue-btn">
+    <a href="index.html#products" class="continue-btn">
       ← Continue Shopping
     </a>
   </div>

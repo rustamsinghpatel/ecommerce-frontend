@@ -8,7 +8,7 @@ console.log("Product JS Loaded");
 // 2️⃣ Get Product ID from URL
 // ======================================================
 const params = new URLSearchParams(window.location.search);
-const productId = params.get("id");
+const productId = params.get("id") || 1; // Default to 1 if no id provided
 
 
 // ======================================================

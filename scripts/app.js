@@ -9,6 +9,7 @@ const statusMsg = document.getElementById("statusMsg");
 fetch("https://dummyjson.com/products")
   .then(res => res.json())
   .then(data => {
+    
 
     const products = data.products; // 🔥 Important
 
@@ -19,7 +20,7 @@ fetch("https://dummyjson.com/products")
 
       console.log("FULL PRODUCT:", product);
       console.log("Price from API:", product.price);
-
+     console.log(product.thumbnail);
       // 🔹 1. LINK BANAYA
       const link = document.createElement("a");
       link.href = `product.html?id=${product.id}`;
@@ -31,11 +32,11 @@ fetch("https://dummyjson.com/products")
       div.className = "product-card";
 
       div.innerHTML = `
-        <img src="${product.thumbnail}" alt="${product.title}" loading="lazy">
-        <h3>${product.title}</h3>
-        <p>₹${Math.round(product.price * 80)}</p>
-        <button>Add to Cart</button>
-      `;
+  <img src="${product.images[0]}" alt="${product.title}" loading="lazy">
+  <h3>${product.title}</h3>
+  <p>₹${Math.round(product.price * 80)}</p>
+  <button>Add to Cart</button>
+`;
 
       // 🔹 3. BUTTON CLICK (STOP PAGE REDIRECT)
       const button = div.querySelector("button");

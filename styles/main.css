@@ -131,6 +131,7 @@ header {
 
 .hero-content {
   max-width: 800px;
+  padding-top: 200px;
 }
 
 .hero h1 {
@@ -394,6 +395,172 @@ header {
 
 .continue-btn:hover {
   background: #d63f0f;
+}
+
+
+/* ===== About & Contact Section ===== */
+.about-section,
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ===== About List ===== */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-section li {
+  margin: 10px 0;
+}
+
+/* ===== Contact Form ===== */
+
+.contact-form {
+  max-width: 400px;
+  margin: 20px auto 0;
+  padding: 25px;                
+  background: #f8f8f8;         *
+  border-radius: 10px;          
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+/*
+   Contact Info Section
+ */
+
+.contact-info {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f6f5f5;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Each line */
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #5a1717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Strong label (Email, Phone) */
+.contact-info strong {
+  color: #000;
+  min-width: 70px;
+}
+
+/* =========================
+   About Section
+========================= */
+
+.about-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.about-section .container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.about-section h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #222;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Paragraph */
+.about-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  text-align: center;
+}
+
+/* List */
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.about-section ul li {
+  background: #f1f1f1;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.about-section ul li:hover {
+  background: #e6e6e6;
+  transform: translateX(5px);
 }
 
 /* =====================================

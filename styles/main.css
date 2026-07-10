@@ -636,16 +636,18 @@ header {
     display:block;
     cursor:pointer;
   }
-}
+
 
   .header-right {
-    gap: 16px;
+    gap: 12px;
+      margin-left:10px;
   }
 
   
   .search-bar{
-        width:80px;
+        width:100px;
         padding:5px;
+        border-radius:5px;
     }
 
   

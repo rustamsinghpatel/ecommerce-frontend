@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Frontend</title>
+    <title>E-Commerce</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <img src="images/logo (1).webp" alt="Shop Logo">
 </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="navMenu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#products">Products</a></li>
@@ -27,15 +27,16 @@
    <a href="cart.html" class="cart">
   🛒 <span class="cart-count">0</span>
 </a>
-    <div class="hamburger">
+
+
+    <button id="logoutBtn" class="logout-btn">Logout</button> 
+  
+    <div class="hamburger" id="menuBtn">
       ☰
     </div>
   </div>
   
-  <div>
-    <button id="logoutBtn" class="logout-btn">Logout</button>
-    
-  </div>
+  
 </header>
 
 <!-- Hero Section -->
@@ -68,7 +69,7 @@
   <div class="footer-content">
     <p>© 2026 RasShop. All Rights Reserved.</p>
     <p class="footer-sub">
-      Made with ❤️ by Rustam Patel
+      Made with ❤️ by Rustam 
     </p>
   </div>
 </footer>

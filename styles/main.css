@@ -90,7 +90,6 @@ header {
   cursor: pointer;
 }
 
-
 /* Logout Button */
 .logout-btn {
   background-color: #ff4d4d;
@@ -112,7 +111,7 @@ header {
 ===================================== */
 .hero {
   flex: 1;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +130,7 @@ header {
 
 .hero-content {
   max-width: 800px;
-  padding-top: 200px;
+  padding: 20px;
 }
 
 .hero h1 {
@@ -599,20 +598,78 @@ header {
   }
 }
 
+
 @media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr;
+
+  /* Header */
+  header {
+    padding: 12px 15px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+  
+ .nav-links{
+    display:none;
+  }
+
+  .nav-links.active{
+    display:block;
+    position:absolute;
+    top:70px;
+    right:15px;
+    background:#fff;
+    width:180px;
+    padding:15px;
+    border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+  }
+
+  .nav-links.active ul{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hamburger{
+    display:block;
+    cursor:pointer;
+  }
+}
+
+  .header-right {
+    gap: 16px;
+  }
+
+  
+  .search-bar{
+        width:80px;
+        padding:5px;
+    }
+
+  
+  .logout-btn {
+    padding: 4px 6px;
+    font-size: 11px;
+    
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 70vh;
   }
 
   .hero h1 {
     font-size: 32px;
   }
 
-  .nav-links {
-    display: none;
+  .hero p {
+    font-size: 16px;
   }
 
-  .hamburger {
-    display: block;
+  /* Products */
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -56,3 +56,13 @@ fetch("https://dummyjson.com/products")
   .catch(error => {
     console.log("API Error:", error);
   });
+
+
+  //risponsive menu toggle
+
+  const menuBtn = document.getElementById("menuBtn");
+const navMenu = document.getElementById("navMenu");
+
+menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});

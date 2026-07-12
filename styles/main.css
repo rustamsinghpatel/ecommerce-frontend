@@ -28,11 +28,17 @@ header {
   padding: 12px 30px;
   background-color: #F0F4F8;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   flex-wrap:wrap;
 }
 .logo img {
   height: 50px;
   width: auto;
   border-radius: 50px;
+}
+.nav-links{
+    flex:1;
+    display:flex;
+    justify-content:center;
 }
 
 .nav-links ul {
@@ -99,6 +105,15 @@ header {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+
+  
+}
+.mobile-logout{
+    display: none;
+}
+
+.desktop-logout{
+    display: inline-block;
 }
 
 .logout-btn:hover {
@@ -131,6 +146,7 @@ header {
 .hero-content {
   max-width: 800px;
   padding: 20px;
+    transform: translateY(100px);
 }
 
 .hero h1 {
@@ -645,17 +661,18 @@ header {
 
   
   .search-bar{
-        width:100px;
-        padding:5px;
-        border-radius:5px;
-    }
-
+    width:200px;
+    padding:8px 10px;
+    border-radius:15px;
+}
   
-  .logout-btn {
-    padding: 4px 6px;
-    font-size: 11px;
-    
-  }
+  .desktop-logout{
+    display: none;
+}
+
+.mobile-logout{
+    display: block;
+}
 
   /* Hero */
   .hero {

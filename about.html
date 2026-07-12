@@ -12,15 +12,20 @@
  <header>
   
  <div class="logo">
-  <img src="images/logo (1).webp" alt="Shop Logo">
+  <a href="index.html">
+    <img src="images/logo (1).webp" alt="Shop Logo">
+  </a>
 </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="navMenu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#products">Products</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li>
+       <button class="logout-btn mobile-logout">Logout</button>
+      </li>
     </ul>
   </nav>
 
@@ -29,7 +34,7 @@
    <a href="cart.html" class="cart">
   🛒 <span class="cart-count">0</span>
 </a>
-    <div class="hamburger">
+    <div class="hamburger" id="menuBtn">
       ☰
     </div>
   </div>
@@ -70,5 +75,6 @@
   </div>
 </footer>
 
+<script src="scripts/app.js" defer></script>
 </body>
 </html>

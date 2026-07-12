@@ -304,10 +304,10 @@ header {
 .cart-item {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   background: #e6e5e5;
-  padding: 70px;
-  margin-bottom: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -490,28 +490,30 @@ header {
  */
 
 .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 25px;
   padding: 20px;
-  background: #f6f5f5;
+  background: #fcf9f9;
   border-radius: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #b79292;
+  gap: 12px;
 }
+
 
 /* Each line */
-.contact-info p {
-  margin: 10px 0;
-  font-size: 16px;
-  color: #5a1717;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.contact-info p{
+  width:320px;
+    display:flex;
+    justify-content:flex-start;
+    
 }
 
-/* Strong label (Email, Phone) */
-.contact-info strong {
-  color: #000;
-  min-width: 70px;
+.contact-info strong{
+    display:inline-block;
+    width:80px;
+    
 }
 
 /* =========================

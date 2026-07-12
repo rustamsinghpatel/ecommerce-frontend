@@ -111,14 +111,16 @@ window.logoutUser = async function () {
   }
 };
 // 🚪 Logout
-const logoutBtn = document.getElementById("logoutBtn");
+const logoutBtns = document.querySelectorAll(".logout-btn");
 
-logoutBtn.addEventListener("click", async () => {
-  try {
-    await signOut(auth);
-    alert("Logged Out Successfully ✅");
-    window.location.href = "auth.html";
-  } catch (error) {
-    alert(error.message);
-  }
+logoutBtns.forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+      alert("Logged Out Successfully ✅");
+      window.location.href = "auth.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });
 });

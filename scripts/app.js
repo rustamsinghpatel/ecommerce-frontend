@@ -66,3 +66,13 @@ const navMenu = document.getElementById("navMenu");
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
+
+//search bar toggle
+const searchBtn = document.getElementById("searchBtn");
+const searchBar = document.querySelector(".search-bar");
+
+if(searchBtn){
+    searchBtn.addEventListener("click", () => {
+        searchBar.classList.toggle("mobile-active");
+    });
+}

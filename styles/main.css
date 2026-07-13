@@ -630,7 +630,8 @@ header {
   }
 
   .logo img {
-    height: 40px;
+    height: 50px;
+    width: auto;
   }
   
  .nav-links{
@@ -678,6 +679,15 @@ header {
     margin-right: 8px;
 }
   
+  .search-bar.mobile-active{
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1000;
+  }
   .desktop-logout{
     display: none;
 }

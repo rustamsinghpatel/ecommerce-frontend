@@ -69,6 +69,11 @@ header {
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+.search-icon{
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
 
 .cart {
   position: relative;
@@ -653,6 +658,7 @@ header {
   .hamburger{
     display:block;
     cursor:pointer;
+    margin-left:10px;
   }
 
 
@@ -661,11 +667,15 @@ header {
       margin-left:10px;
   }
 
-  
   .search-bar{
-    width:200px;
-    padding:8px 10px;
-    border-radius:15px;
+    display: none;
+}
+
+.search-icon{
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 8px;
 }
   
   .desktop-logout{
